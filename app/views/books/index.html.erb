@@ -1,2 +1,19 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+<p></p>
+
+<form class>
+  <h2>New book</h2>
+  <%= form_with model:@book,local:true do |f| %>
+     <div class=field>    
+       <lavel for="book_title">title</lavel>
+         <%= f.text_field :title %>
+     </div>
+     <div class=field>
+       <lavel for="book_body">text</lavel>
+         <%= f.text_area :body %>
+     </div>
+     <div class=actions>
+         <%= f.submit 'create book' %>
+     </div>
+  <% end %>
+</form>
